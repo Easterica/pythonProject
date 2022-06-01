@@ -1,7 +1,5 @@
 import random
 
-game_counter = 0
-
 computer_options = ["rock", "paper", "scissors"]
 computer_choice = computer_options[random.randint(0,2)]
 
@@ -13,7 +11,7 @@ my_choice = input().lower()
 
 while my_choice not in computer_options:
     print("Please select one of the following options: Rock, Paper, Scissors")
-    
+    my_choice = input().lower()
 
     if my_choice == "rock" and computer_choice == "scissors":
         print(f"Your choice is: {my_choice}")
