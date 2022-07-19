@@ -6,12 +6,10 @@
 
 
 input_list = input().split()
-merged_items = ""
 output = []
 
 while True:
     command = input()
-    copy_of_input = input_list.copy()
     if command == "3:1":
         break
     command = command.split()
@@ -19,8 +17,19 @@ while True:
     if command[0] == "merge":
         start_index = int(command[1])
         end_index = int(command[2])
-        merged_items = input_list[start_index:end_index+1]
-        merged_items = "".join(merged_items)
+        if start_index < 0:
+            start_index = 0
+            input_list[start_index:end_index+1] = ["".join(input_list[start_index:end_index+1])]
+    elif command[1] == "divide":
+        index = int(command[1])
+        partitions = int(command[2])
+        to_be_divided = input_list[index]
+
+        input_list.pop(index)
+        pieces = len(to_be_divided) // partitions
+
+
+
 
     print(input_list)
 
