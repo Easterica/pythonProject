@@ -20,7 +20,7 @@ class Inventory:
 
 
 inventory = Inventory(2)
-inventory.add_item("potion")    
+inventory.add_item("potion")
 inventory.add_item("sword")
 print(inventory.add_item("bottle"))
 print(inventory.get_capacity())
